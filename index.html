@@ -1,0 +1,1965 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="img/android-chrome-512x512.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200..800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>S-gun </title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <div class="cookies__container">
+        <p>
+            We use cookies to enhance your experience at Race Up Casino. By continuing to browse, you agree to our
+            cookie policy.
+        </p>
+        <button id="accept-cookies">Accept</button>
+    </div>
+
+    <header class="header">
+                    <div class="header__top">
+                <div class="left">
+                    <a href="#" class="link">
+                        <p class="descr grey-text">
+                            Черная пятница каждый день! Скидка 15% на весь ассортимент
+                        </p>
+                    </a>
+                </div>
+                <div class="right">
+                    <div class="social__container">
+                        <a href="https://www.instagram.com/sgan.adult?igsh=MTE2MzEzbjA4OW10dw==">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                    </div>
+                    <div class="social__container">
+                        <i class="bi bi-phone"></i>
+
+                        <a class="header__phone" href="tel:+79991137959">+7(999)113-79-59</a>
+                    </div>
+
+                </div>
+            </div>
+        <div class="container">
+
+            <div class="header__bottom">
+                <div class="left">
+                    <div class="logo__block">
+                        <a href="https://s-gan.ru/" class="logo logo-text">
+                            <span class="logo-dark">SGAN
+                                <br>
+                                Adult</span>
+                        </a>
+                    </div>
+
+                    <nav class="nav nav__desktop">
+                        <ul class="nav__list">
+                            <li class="nav__item nav__item--dropdown">
+                                <a href="/catalog" class="nav__link">
+                                    <i class="bi bi-list"></i>
+                                    <p class="descr">Каталог</p>
+                                </a>
+
+                                <!-- Выпадающее меню категорий -->
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-container">
+                                        <!-- Колонка 1 (с подкатегориями) -->
+                                        <div class="dropdown-column">
+                                            <h3 class="dropdown-title">Категория 1</h3>
+                                            <ul class="dropdown-sublist">
+                                                <li><a href="#">Подкатегория 1.1</a></li>
+                                                <li><a href="#">Подкатегория 1.2</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Колонка 2 (с подкатегориями) -->
+                                        <div class="dropdown-column">
+                                            <h3 class="dropdown-title">Категория 2</h3>
+                                            <ul class="dropdown-sublist">
+                                                <li><a href="#">Подкатегория 2.1</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Колонка 3 (без подкатегорий) -->
+                                        <div class="dropdown-column">
+                                            <h3 class="dropdown-title">Категория 3</h3>
+                                        </div>
+
+                                        <!-- Колонка 4 (без подкатегорий) -->
+                                        <div class="dropdown-column">
+                                            <h3 class="dropdown-title">Категория 4</h3>
+                                        </div>
+
+                                        <!-- Колонка 5 (с подкатегориями) -->
+                                        <div class="dropdown-column">
+                                            <h3 class="dropdown-title">Категория 5</h3>
+                                            <ul class="dropdown-sublist">
+                                                <li><a href="#">Подкатегория 5.1</a></li>
+                                                <li><a href="#">Подкатегория 5.2</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Колонка 6 (без подкатегорий) -->
+                                        <div class="dropdown-column">
+                                            <h3 class="dropdown-title">Категория 6</h3>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- woocomerce 
+                            <div class="dropdown-menu">
+                                <div class="dropdown-container">
+                                    <?php
+                                    $categories = get_terms('product_cat', array(
+                                    'hide_empty' => false,
+                                    'number' => 6
+                                    ));
+                                    
+                                    foreach ($categories as $category) {
+                                    $subcategories = get_terms('product_cat', array(
+                                        'hide_empty' => false,
+                                        'parent' => $category->term_id
+                                    ));
+                                    ?>
+                                    <div
+                                        class="dropdown-column <?php if (!empty($subcategories)) echo 'has-sublist'; ?>">
+                                        <h3 class="dropdown-title">
+                                            <a href="<?php echo get_term_link($category); ?>">
+                                                <?php echo $category->name; ?>
+                                            </a>
+                                        </h3>
+                                        <?php if (!empty($subcategories)): ?>
+                                        <ul class="dropdown-sublist">
+                                            <?php foreach ($subcategories as $subcat): ?>
+                                            <li><a href="<?php echo get_term_link($subcat); ?>">
+                                                    <?php echo $subcat->name; ?>
+                                                </a></li>
+                                            <?php endforeach; ?>
+                                        </ul>
+                                        <?php endif; ?>
+                                    </div>
+                                    <?php } ?>
+                                </div>
+                            </div>
+                            -->
+
+
+                            </li>
+                            <li class="nav__item">
+                                <a href="/catalog" class="nav__link">
+                                    <p class="descr">
+                                        Быстрая доставка
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="/catalog" class="nav__link">
+                                    <p class="descr">
+                                        Гарантия низкой цены
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="/catalog" class="nav__link">
+                                    <p class="descr">
+                                        Оплата
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="/catalog" class="nav__link">
+                                    <p class="descr">
+                                        Гарантия
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="/catalog" class="nav__link">
+                                    <p class="descr">
+                                        Помощь
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav__item gift-link">
+                                <a href="/catalog" class="nav__link">
+                                    <p class="descr">
+                                        <i class="bi bi-gift"></i>
+                                        АКЦИИ
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+
+
+                </div>
+                <div class="right">
+
+                    <div class="header-icons">
+                        <button class="icon-search">
+                            <i class="bi bi-search"></i>
+                        </button>
+                        <a href="/my-account" class="icon-account">
+                            <i class="bi bi-person-circle"></i>
+                        </a>
+                        <a href="#" class="icon-wishlist">
+                            <i class="bi bi-heart"></i>
+                            <span class="wishlist-count">
+                                <!-- <?php echo YITH_WCWL()->count_products(); ?> -->
+                            </span>
+                        </a>
+                        <a href="/cart" class="icon-cart">
+                            <i class="bi bi-basket3"></i>
+                            <span class="cart-count">
+                                <!-- <?php echo WC()->cart->get_cart_contents_count(); ?> -->
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="container">
+        <main class="main">
+
+            <section class="hero__content">
+                <div class="left">
+                    <a href="#" class="link">
+                        <h1 class="main__title">
+                            <div class="discount-highlight">-15%</div>
+                            <div class="discount-text"><strong>
+                                    на всю
+                                </strong>
+                            </div>
+                            <div class="discount-text">косметику</div>
+                        </h1>
+
+                        <p class="descr">
+                            Натуральная и безопасная косметика со сбалансированным pH балансом
+                        </p>
+                    </a>
+                </div>
+                <div class="right">
+                    <div class="swiper swiper-auto">
+                        <div class="bonus__container">
+                            <p class="descr">
+                                Подарки к каждому заказу
+                            </p>
+                        </div>
+
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <div class="swiper-slide">
+                                    <div class="card__slider">
+                                        <img src="https://s-gan.ru/wp-content/uploads/2025/01/%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B8%D0%BA%D0%B03_0043__%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5_-1-300x300.png"
+                                            alt="slide" class="img">
+                                        <h2 class="header-2">
+                                            Лубрикант SGAN YONI GEL Мексиканский лайм, 100 мл
+                                        </h2>
+
+                                        <div class="buy__container">
+                                            <p class="descr price-text">
+                                                2000 ₽
+                                            </p>
+                                            <div class="btn__container">
+                                                <button class="btn">
+                                                    добавить в корзину
+                                                </button>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-slide">
+                                    <div class="card__slider">
+                                        <img src="https://s-gan.ru/wp-content/uploads/2025/01/%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B8%D0%BA%D0%B03_0043__%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5_-1-300x300.png"
+                                            alt="slide" class="img">
+                                        <h2 class="header-2">
+                                            Лубрикант SGAN YONI GEL Мексиканский лайм, 100 мл
+                                        </h2>
+
+                                        <div class="buy__container">
+                                            <p class="descr price-text">
+                                                2000 ₽
+                                            </p>
+                                            <div class="btn__container">
+                                                <button class="btn">
+                                                    добавить в корзину
+                                                </button>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-slide">
+                                    <div class="card__slider">
+                                        <img src="https://s-gan.ru/wp-content/uploads/2025/01/%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B8%D0%BA%D0%B03_0043__%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5_-1-300x300.png"
+                                            alt="slide" class="img">
+                                        <h2 class="header-2">
+                                            Лубрикант SGAN YONI GEL Мексиканский лайм, 100 мл
+                                        </h2>
+
+                                        <div class="buy__container">
+                                            <p class="descr price-text">
+                                                2000 ₽
+                                            </p>
+                                            <div class="btn__container">
+                                                <button class="btn">
+                                                    добавить в корзину
+                                                </button>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="category__link">
+                <h2 class="header-2">
+                    Популярные категории
+                </h2>
+                <ul class="list">
+                    <li class="item">
+                        <a href="/category" class="link">
+                            <div class="anim__container">
+
+                                <img src="https://s-gan.ru/wp-content/uploads/2025/01/Frame-5-3.png" alt="category"
+                                    class="img">
+                                <h3 class="header-3">
+                                    Анальные пробки
+                                </h3>
+                                <p class="descr">
+                                    С вибрацией
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="/category" class="link">
+                            <div class="anim__container">
+
+                                <img src="https://s-gan.ru/wp-content/uploads/2025/01/Frame-5-3.png" alt="category"
+                                    class="img">
+                                <h3 class="header-3">
+                                    Анальные пробки
+                                </h3>
+                                <p class="descr">
+                                    С вибрацией
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="/category" class="link">
+                            <div class="anim__container">
+
+                                <img src="https://s-gan.ru/wp-content/uploads/2025/01/Frame-5-3.png" alt="category"
+                                    class="img">
+                                <h3 class="header-3">
+                                    Анальные пробки
+                                </h3>
+                                <p class="descr">
+                                    С вибрацией
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="/category" class="link">
+                            <div class="anim__container">
+
+                                <img src="https://s-gan.ru/wp-content/uploads/2025/01/Frame-5-3.png" alt="category"
+                                    class="img">
+                                <h3 class="header-3">
+                                    Анальные пробки
+                                </h3>
+                                <p class="descr">
+                                    С вибрацией
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="/category" class="link">
+                            <div class="anim__container">
+
+                                <img src="https://s-gan.ru/wp-content/uploads/2025/01/Frame-5-3.png" alt="category"
+                                    class="img">
+                                <h3 class="header-3">
+                                    Анальные пробки
+                                </h3>
+                                <p class="descr">
+                                    С вибрацией
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="/category" class="link">
+                            <div class="anim__container">
+
+                                <img src="https://s-gan.ru/wp-content/uploads/2025/01/Frame-5-3.png" alt="category"
+                                    class="img">
+                                <h3 class="header-3">
+                                    Анальные пробки
+                                </h3>
+                                <p class="descr">
+                                    С вибрацией
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+            </section>
+
+            <section class="catalog__main">
+                <h2 class="header-2">
+                    Каталог товаров
+                </h2>
+
+                <div class="tabs">
+                    <div class="tabs__top">
+                        <button class="tab-btn active" data-tab="new-arrivals">Новые поступления</button>
+                        <button class="tab-btn" data-tab="on-sale">Скидки</button>
+                        <button class="tab-btn" data-tab="best-sellers">Хиты продаж</button>
+                    </div>
+
+                    <ul class="grid-3__list tab-content active" id="new-arrivals">
+                        <li class="grid-3__item">
+
+                            <div class="card__content">
+                                <div class="card__loop-btn">
+                                    <span class="view-card">
+                                        <svg aria-hidden="true" role="img" focusable="false"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                            <circle cx="12" cy="12" r="3"></circle>
+                                        </svg>
+                                    </span>
+                                    <span class="merchant-svg-icon">
+                                        <svg aria-hidden="true" role="img" focusable="false"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </div>
+
+                                <div class="discount__container">
+                                    <p class="descr">
+                                        Акция
+                                    </p>
+                                </div>
+                                <img src="https://s-gan.ru/wp-content/uploads/2023/09/%D0%BA%D1%83%D1%80%D0%B0%D0%BD%D1%827_0043__%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9_-1-300x300.png"
+                                    alt="category" class="img">
+                                <h3 class="header-3">
+                                    Лубрикант SGAN YONI GEL <span class="product-flavor">Мексиканский лайм</span>, 100
+                                    мл
+                                </h3>
+                                <div class="price__container">
+                                    <p class="descr price-underline">
+                                        2350 ₽
+                                    </p>
+
+                                    <p class="descr descr-text">
+                                        1500 ₽
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="btn__container">
+                                <button class="btn">
+                                    В корзину
+                                </button>
+                            </div>
+                        </li>
+                        <li class="grid-3__item">
+
+                            <div class="card__content">
+                                <div class="card__loop-btn">
+                                    <span class="view-card">
+                                        <svg aria-hidden="true" role="img" focusable="false"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                            <circle cx="12" cy="12" r="3"></circle>
+                                        </svg>
+                                    </span>
+                                    <span class="merchant-svg-icon">
+                                        <svg aria-hidden="true" role="img" focusable="false"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </div>
+
+                                <div class="discount__container">
+                                    <p class="descr">
+                                        Акция
+                                    </p>
+                                </div>
+                                <img src="https://s-gan.ru/wp-content/uploads/2023/09/%D0%BA%D1%83%D1%80%D0%B0%D0%BD%D1%827_0043__%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9_-1-300x300.png"
+                                    alt="category" class="img">
+                                <h3 class="header-3">
+                                    Лубрикант SGAN YONI GEL <span class="product-flavor">Мексиканский лайм</span>, 100
+                                    мл
+                                    Лубрикант SGAN YONI GEL <span class="product-flavor">Мексиканский лайм</span>, 100
+                                    мл
+                                    Лубрикант SGAN YONI GEL <span class="product-flavor">Мексиканский лайм</span>, 100
+                                    мл
+                                </h3>
+                                <div class="price__container">
+                                    <p class="descr price-underline">
+                                        2350 ₽
+                                    </p>
+
+                                    <p class="descr descr-text">
+                                        1500 ₽
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="btn__container">
+                                <button class="btn">
+                                    В корзину
+                                </button>
+                            </div>
+                        </li>
+                        <li class="grid-3__item">
+
+                            <div class="card__content">
+                                <div class="card__loop-btn">
+                                    <span class="view-card">
+                                        <svg aria-hidden="true" role="img" focusable="false"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                            <circle cx="12" cy="12" r="3"></circle>
+                                        </svg>
+                                    </span>
+                                    <span class="merchant-svg-icon">
+                                        <svg aria-hidden="true" role="img" focusable="false"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </div>
+
+                                <div class="discount__container">
+                                    <p class="descr">
+                                        Акция
+                                    </p>
+                                </div>
+                                <img src="https://s-gan.ru/wp-content/uploads/2023/09/%D0%BA%D1%83%D1%80%D0%B0%D0%BD%D1%827_0043__%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9_-1-300x300.png"
+                                    alt="category" class="img">
+                                <h3 class="header-3">
+                                    <span class="product-flavor">Мексиканский лайм</span>, 100
+                                    мл
+                                </h3>
+                                <div class="price__container">
+                                    <p class="descr price-underline">
+                                        2350 ₽
+                                    </p>
+
+                                    <p class="descr descr-text">
+                                        1500 ₽
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="btn__container">
+                                <button class="btn">
+                                    В корзину
+                                </button>
+                            </div>
+                        </li>
+                        <li class="grid-3__item">
+
+                            <div class="card__content">
+                                <div class="card__loop-btn">
+                                    <span class="view-card">
+                                        <svg aria-hidden="true" role="img" focusable="false"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                            <circle cx="12" cy="12" r="3"></circle>
+                                        </svg>
+                                    </span>
+                                    <span class="merchant-svg-icon">
+                                        <svg aria-hidden="true" role="img" focusable="false"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </div>
+
+                                <div class="discount__container">
+                                    <p class="descr">
+                                        Акция
+                                    </p>
+                                </div>
+                                <img src="https://s-gan.ru/wp-content/uploads/2023/09/%D0%BA%D1%83%D1%80%D0%B0%D0%BD%D1%827_0043__%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9_-1-300x300.png"
+                                    alt="category" class="img">
+                                <h3 class="header-3">
+                                    Лубрикант SGAN YONI GEL <span class="product-flavor">Мексиканский лайм</span>, 100
+                                    мл
+                                </h3>
+                                <div class="price__container">
+                                    <p class="descr price-underline">
+                                        2350 ₽
+                                    </p>
+
+                                    <p class="descr descr-text">
+                                        1500 ₽
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="btn__container">
+                                <button class="btn">
+                                    В корзину
+                                </button>
+                            </div>
+                        </li>
+                        <li class="grid-3__item">
+
+                            <div class="card__content">
+                                <div class="card__loop-btn">
+                                    <span class="view-card">
+                                        <svg aria-hidden="true" role="img" focusable="false"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                            <circle cx="12" cy="12" r="3"></circle>
+                                        </svg>
+                                    </span>
+                                    <span class="merchant-svg-icon">
+                                        <svg aria-hidden="true" role="img" focusable="false"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </div>
+
+                                <div class="discount__container">
+                                    <p class="descr">
+                                        Акция
+                                    </p>
+                                </div>
+                                <img src="https://s-gan.ru/wp-content/uploads/2023/09/%D0%BA%D1%83%D1%80%D0%B0%D0%BD%D1%827_0043__%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9_-1-300x300.png"
+                                    alt="category" class="img">
+                                <h3 class="header-3">
+                                    Лубрикант SGAN YONI GEL <span class="product-flavor">Мексиканский лайм</span>, 100
+                                    мл
+                                    Лубрикант SGAN YONI GEL <span class="product-flavor">Мексиканский лайм</span>, 100
+                                    мл
+                                    Лубрикант SGAN YONI GEL <span class="product-flavor">Мексиканский лайм</span>, 100
+                                    мл
+                                </h3>
+                                <div class="price__container">
+                                    <p class="descr price-underline">
+                                        2350 ₽
+                                    </p>
+
+                                    <p class="descr descr-text">
+                                        1500 ₽
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="btn__container">
+                                <button class="btn">
+                                    В корзину
+                                </button>
+                            </div>
+                        </li>
+                        <li class="grid-3__item">
+
+                            <div class="card__content">
+                                <div class="card__loop-btn">
+                                    <span class="view-card">
+                                        <svg aria-hidden="true" role="img" focusable="false"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                            <circle cx="12" cy="12" r="3"></circle>
+                                        </svg>
+                                    </span>
+                                    <span class="merchant-svg-icon">
+                                        <svg aria-hidden="true" role="img" focusable="false"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </div>
+
+                                <div class="discount__container">
+                                    <p class="descr">
+                                        Акция
+                                    </p>
+                                </div>
+                                <img src="https://s-gan.ru/wp-content/uploads/2023/09/%D0%BA%D1%83%D1%80%D0%B0%D0%BD%D1%827_0043__%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9_-1-300x300.png"
+                                    alt="category" class="img">
+                                <h3 class="header-3">
+                                    <span class="product-flavor">Мексиканский лайм</span>, 100
+                                    мл
+                                </h3>
+                                <div class="price__container">
+                                    <p class="descr price-underline">
+                                        2350 ₽
+                                    </p>
+
+                                    <p class="descr descr-text">
+                                        1500 ₽
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="btn__container">
+                                <button class="btn">
+                                    В корзину
+                                </button>
+                            </div>
+                        </li>
+
+
+                    </ul>
+                    <ul class="grid-3__list tab-content" id="on-sale">
+
+                        <li class="grid-3__item">
+                            <div class="card__content">
+                                <div class="card__loop-btn">
+                                    <span class="view-card">
+                                        <svg aria-hidden="true" role="img" focusable="false"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                            <circle cx="12" cy="12" r="3"></circle>
+                                        </svg>
+                                    </span>
+                                    <span class="merchant-svg-icon">
+                                        <svg aria-hidden="true" role="img" focusable="false"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </div>
+
+                                <div class="discount__container">
+                                    <p class="descr">
+                                        Акция
+                                    </p>
+                                </div>
+                                <img src="https://s-gan.ru/wp-content/uploads/2023/09/energy1__%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5_-600x600.png"
+                                    alt="category" class="img">
+                                <h3 class="header-3">
+                                    Лубрикант SGAN YONI GEL <span class="product-flavor">Мексиканский лайм</span>, 100
+                                    мл
+                                </h3>
+                                <div class="price__container">
+                                    <p class="descr price-underline">
+                                        2350 ₽
+                                    </p>
+
+                                    <p class="descr descr-text">
+                                        1500 ₽
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="btn__container">
+                                <button class="btn">
+                                    В корзину
+                                </button>
+                            </div>
+                        </li>
+
+                        <li class="grid-3__item">
+                            <div class="card__content">
+                                <div class="card__loop-btn">
+                                    <span class="view-card">
+                                        <svg aria-hidden="true" role="img" focusable="false"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                            <circle cx="12" cy="12" r="3"></circle>
+                                        </svg>
+                                    </span>
+                                    <span class="merchant-svg-icon">
+                                        <svg aria-hidden="true" role="img" focusable="false"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </div>
+
+                                <div class="discount__container">
+                                    <p class="descr">
+                                        Акция
+                                    </p>
+                                </div>
+                                <img src="https://s-gan.ru/wp-content/uploads/2023/09/energy1__%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5_-600x600.png"
+                                    alt="category" class="img">
+                                <h3 class="header-3">
+                                    Лубрикант SGAN YONI GEL <span class="product-flavor">Мексиканский лайм</span>, 100
+                                    мл
+                                </h3>
+                                <div class="price__container">
+                                    <p class="descr price-underline">
+                                        2350 ₽
+                                    </p>
+
+                                    <p class="descr descr-text">
+                                        1500 ₽
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="btn__container">
+                                <button class="btn">
+                                    В корзину
+                                </button>
+                            </div>
+                        </li>
+
+                        <li class="grid-3__item">
+                            <div class="card__content">
+                                <div class="card__loop-btn">
+                                    <span class="view-card">
+                                        <svg aria-hidden="true" role="img" focusable="false"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                            <circle cx="12" cy="12" r="3"></circle>
+                                        </svg>
+                                    </span>
+                                    <span class="merchant-svg-icon">
+                                        <svg aria-hidden="true" role="img" focusable="false"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </div>
+
+                                <div class="discount__container">
+                                    <p class="descr">
+                                        Акция
+                                    </p>
+                                </div>
+                                <img src="https://s-gan.ru/wp-content/uploads/2023/09/energy1__%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5_-600x600.png"
+                                    alt="category" class="img">
+                                <h3 class="header-3">
+                                    Лубрикант SGAN YONI GEL <span class="product-flavor">Мексиканский лайм</span>, 100
+                                    мл
+                                </h3>
+                                <div class="price__container">
+                                    <p class="descr price-underline">
+                                        2350 ₽
+                                    </p>
+
+                                    <p class="descr descr-text">
+                                        1500 ₽
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="btn__container">
+                                <button class="btn">
+                                    В корзину
+                                </button>
+                            </div>
+                        </li>
+
+                        <li class="grid-3__item">
+                            <div class="card__content">
+                                <div class="card__loop-btn">
+                                    <span class="view-card">
+                                        <svg aria-hidden="true" role="img" focusable="false"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                            <circle cx="12" cy="12" r="3"></circle>
+                                        </svg>
+                                    </span>
+                                    <span class="merchant-svg-icon">
+                                        <svg aria-hidden="true" role="img" focusable="false"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </div>
+
+                                <div class="discount__container">
+                                    <p class="descr">
+                                        Акция
+                                    </p>
+                                </div>
+                                <img src="https://s-gan.ru/wp-content/uploads/2023/09/energy1__%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5_-600x600.png"
+                                    alt="category" class="img">
+                                <h3 class="header-3">
+                                    Лубрикант SGAN YONI GEL <span class="product-flavor">Мексиканский лайм</span>, 100
+                                    мл
+                                </h3>
+                                <div class="price__container">
+                                    <p class="descr price-underline">
+                                        2350 ₽
+                                    </p>
+
+                                    <p class="descr descr-text">
+                                        1500 ₽
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="btn__container">
+                                <button class="btn">
+                                    В корзину
+                                </button>
+                            </div>
+                        </li>
+
+                        <li class="grid-3__item">
+                            <div class="card__content">
+                                <div class="card__loop-btn">
+                                    <span class="view-card">
+                                        <svg aria-hidden="true" role="img" focusable="false"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                            <circle cx="12" cy="12" r="3"></circle>
+                                        </svg>
+                                    </span>
+                                    <span class="merchant-svg-icon">
+                                        <svg aria-hidden="true" role="img" focusable="false"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </div>
+
+                                <div class="discount__container">
+                                    <p class="descr">
+                                        Акция
+                                    </p>
+                                </div>
+                                <img src="https://s-gan.ru/wp-content/uploads/2023/09/energy1__%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5_-600x600.png"
+                                    alt="category" class="img">
+                                <h3 class="header-3">
+                                    Лубрикант SGAN YONI GEL <span class="product-flavor">Мексиканский лайм</span>, 100
+                                    мл
+                                </h3>
+                                <div class="price__container">
+                                    <p class="descr price-underline">
+                                        2350 ₽
+                                    </p>
+
+                                    <p class="descr descr-text">
+                                        1500 ₽
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="btn__container">
+                                <button class="btn">
+                                    В корзину
+                                </button>
+                            </div>
+                        </li>
+
+                        <li class="grid-3__item">
+                            <div class="card__content">
+                                <div class="card__loop-btn">
+                                    <span class="view-card">
+                                        <svg aria-hidden="true" role="img" focusable="false"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                            <circle cx="12" cy="12" r="3"></circle>
+                                        </svg>
+                                    </span>
+                                    <span class="merchant-svg-icon">
+                                        <svg aria-hidden="true" role="img" focusable="false"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </div>
+
+                                <div class="discount__container">
+                                    <p class="descr">
+                                        Акция
+                                    </p>
+                                </div>
+                                <img src="https://s-gan.ru/wp-content/uploads/2023/09/energy1__%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5_-600x600.png"
+                                    alt="category" class="img">
+                                <h3 class="header-3">
+                                    Лубрикант SGAN YONI GEL <span class="product-flavor">Мексиканский лайм</span>, 100
+                                    мл
+                                </h3>
+                                <div class="price__container">
+                                    <p class="descr price-underline">
+                                        2350 ₽
+                                    </p>
+
+                                    <p class="descr descr-text">
+                                        1500 ₽
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="btn__container">
+                                <button class="btn">
+                                    В корзину
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="grid-3__list tab-content" id="best-sellers">
+                        <li class="grid-3__item">
+
+                            <div class="card__content">
+                                <div class="card__loop-btn">
+                                    <span class="view-card">
+                                        <svg aria-hidden="true" role="img" focusable="false"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                            <circle cx="12" cy="12" r="3"></circle>
+                                        </svg>
+                                    </span>
+                                    <span class="merchant-svg-icon">
+                                        <svg aria-hidden="true" role="img" focusable="false"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </div>
+
+                                <div class="discount__container">
+                                    <p class="descr">
+                                        Акция
+                                    </p>
+                                </div>
+                                <img src="https://s-gan.ru/wp-content/uploads/2023/09/4__%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9___3_-600x600.png"
+                                    alt="category" class="img">
+                                <h3 class="header-3">
+                                    Лубрикант SGAN YONI GEL <span class="product-flavor">Мексиканский лайм</span>, 100
+                                    мл
+                                </h3>
+                                <div class="price__container">
+                                    <p class="descr price-underline">
+                                        2350 ₽
+                                    </p>
+
+                                    <p class="descr descr-text">
+                                        1500 ₽
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="btn__container">
+                                <button class="btn">
+                                    В корзину
+                                </button>
+                            </div>
+                        </li>
+                        <li class="grid-3__item">
+
+                            <div class="card__content">
+                                <div class="card__loop-btn">
+                                    <span class="view-card">
+                                        <svg aria-hidden="true" role="img" focusable="false"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                            <circle cx="12" cy="12" r="3"></circle>
+                                        </svg>
+                                    </span>
+                                    <span class="merchant-svg-icon">
+                                        <svg aria-hidden="true" role="img" focusable="false"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </div>
+
+                                <div class="discount__container">
+                                    <p class="descr">
+                                        Акция
+                                    </p>
+                                </div>
+                                <img src="https://s-gan.ru/wp-content/uploads/2023/09/4__%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9___3_-600x600.png"
+                                    alt="category" class="img">
+                                <h3 class="header-3">
+                                    Лубрикант SGAN YONI GEL <span class="product-flavor">Мексиканский лайм</span>, 100
+                                    мл
+                                </h3>
+                                <div class="price__container">
+                                    <p class="descr price-underline">
+                                        2350 ₽
+                                    </p>
+
+                                    <p class="descr descr-text">
+                                        1500 ₽
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="btn__container">
+                                <button class="btn">
+                                    В корзину
+                                </button>
+                            </div>
+                        </li>
+                        <li class="grid-3__item">
+
+                            <div class="card__content">
+                                <div class="card__loop-btn">
+                                    <span class="view-card">
+                                        <svg aria-hidden="true" role="img" focusable="false"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                            <circle cx="12" cy="12" r="3"></circle>
+                                        </svg>
+                                    </span>
+                                    <span class="merchant-svg-icon">
+                                        <svg aria-hidden="true" role="img" focusable="false"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </div>
+
+                                <div class="discount__container">
+                                    <p class="descr">
+                                        Акция
+                                    </p>
+                                </div>
+                                <img src="https://s-gan.ru/wp-content/uploads/2023/09/4__%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9___3_-600x600.png"
+                                    alt="category" class="img">
+                                <h3 class="header-3">
+                                    Лубрикант SGAN YONI GEL <span class="product-flavor">Мексиканский лайм</span>, 100
+                                    мл
+                                </h3>
+                                <div class="price__container">
+                                    <p class="descr price-underline">
+                                        2350 ₽
+                                    </p>
+
+                                    <p class="descr descr-text">
+                                        1500 ₽
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="btn__container">
+                                <button class="btn">
+                                    В корзину
+                                </button>
+                            </div>
+                        </li>
+                        <li class="grid-3__item">
+
+                            <div class="card__content">
+                                <div class="card__loop-btn">
+                                    <span class="view-card">
+                                        <svg aria-hidden="true" role="img" focusable="false"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                            <circle cx="12" cy="12" r="3"></circle>
+                                        </svg>
+                                    </span>
+                                    <span class="merchant-svg-icon">
+                                        <svg aria-hidden="true" role="img" focusable="false"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </div>
+
+                                <div class="discount__container">
+                                    <p class="descr">
+                                        Акция
+                                    </p>
+                                </div>
+                                <img src="https://s-gan.ru/wp-content/uploads/2023/09/4__%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9___3_-600x600.png"
+                                    alt="category" class="img">
+                                <h3 class="header-3">
+                                    Лубрикант SGAN YONI GEL <span class="product-flavor">Мексиканский лайм</span>, 100
+                                    мл
+                                </h3>
+                                <div class="price__container">
+                                    <p class="descr price-underline">
+                                        2350 ₽
+                                    </p>
+
+                                    <p class="descr descr-text">
+                                        1500 ₽
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="btn__container">
+                                <button class="btn">
+                                    В корзину
+                                </button>
+                            </div>
+                        </li>
+                        <li class="grid-3__item">
+
+                            <div class="card__content">
+                                <div class="card__loop-btn">
+                                    <span class="view-card">
+                                        <svg aria-hidden="true" role="img" focusable="false"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                            <circle cx="12" cy="12" r="3"></circle>
+                                        </svg>
+                                    </span>
+                                    <span class="merchant-svg-icon">
+                                        <svg aria-hidden="true" role="img" focusable="false"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </div>
+
+                                <div class="discount__container">
+                                    <p class="descr">
+                                        Акция
+                                    </p>
+                                </div>
+                                <img src="https://s-gan.ru/wp-content/uploads/2023/09/4__%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9___3_-600x600.png"
+                                    alt="category" class="img">
+                                <h3 class="header-3">
+                                    Лубрикант SGAN YONI GEL <span class="product-flavor">Мексиканский лайм</span>, 100
+                                    мл
+                                </h3>
+                                <div class="price__container">
+                                    <p class="descr price-underline">
+                                        2350 ₽
+                                    </p>
+
+                                    <p class="descr descr-text">
+                                        1500 ₽
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="btn__container">
+                                <button class="btn">
+                                    В корзину
+                                </button>
+                            </div>
+                        </li>
+                        <li class="grid-3__item">
+
+                            <div class="card__content">
+                                <div class="card__loop-btn">
+                                    <span class="view-card">
+                                        <svg aria-hidden="true" role="img" focusable="false"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                            <circle cx="12" cy="12" r="3"></circle>
+                                        </svg>
+                                    </span>
+                                    <span class="merchant-svg-icon">
+                                        <svg aria-hidden="true" role="img" focusable="false"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </div>
+
+                                <div class="discount__container">
+                                    <p class="descr">
+                                        Акция
+                                    </p>
+                                </div>
+                                <img src="https://s-gan.ru/wp-content/uploads/2023/09/4__%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9___3_-600x600.png"
+                                    alt="category" class="img">
+                                <h3 class="header-3">
+                                    Лубрикант SGAN YONI GEL <span class="product-flavor">Мексиканский лайм</span>, 100
+                                    мл
+                                </h3>
+                                <div class="price__container">
+                                    <p class="descr price-underline">
+                                        2350 ₽
+                                    </p>
+
+                                    <p class="descr descr-text">
+                                        1500 ₽
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="btn__container">
+                                <button class="btn">
+                                    В корзину
+                                </button>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </section>
+
+            <section class="advatages">
+                <ul class="grid-4__list">
+                    <li class="grid-4__item">
+                        <div class="icon__container">
+                            <i class="bi bi-check-circle"></i>
+                        </div>
+                        <div class="text__container">
+                            <h3 class="header-3">
+                                Быстрая доставка
+                            </h3>
+                            <p class="descr">
+                                Мы осуществляем доставку по всей России, а также в страны СНГ. Быстрая доставка
+                                гарантирована.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="grid-4__item">
+                        <div class="icon__container">
+                            <i class="bi bi-check-circle"></i>
+                        </div>
+                        <div class="text__container">
+                            <h3 class="header-3">
+                                Быстрая доставка
+                            </h3>
+                            <p class="descr">
+                                Мы осуществляем доставку по всей России, а также в страны СНГ. Быстрая доставка
+                                гарантирована.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="grid-4__item">
+                        <div class="icon__container">
+                            <i class="bi bi-check-circle"></i>
+                        </div>
+                        <div class="text__container">
+                            <h3 class="header-3">
+                                Быстрая доставка
+                            </h3>
+                            <p class="descr">
+                                Мы осуществляем доставку по всей России, а также в страны СНГ. Быстрая доставка
+                                гарантирована.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="grid-4__item">
+                        <div class="icon__container">
+                            <i class="bi bi-check-circle"></i>
+                        </div>
+                        <div class="text__container">
+                            <h3 class="header-3">
+                                Быстрая доставка
+                            </h3>
+                            <p class="descr">
+                                Мы осуществляем доставку по всей России, а также в страны СНГ. Быстрая доставка
+                                гарантирована.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="benefits">
+
+                <div class="left">
+                    <img src="img/delivered-1.webp" alt="delivered" class="img">
+                </div>
+                <div class="right">
+                    <h2 class="header-2">
+                        Доставка до 2х часов
+                        </h3>
+                        <p class="descr">
+                            Мы осуществляем доставку по всей России, а также в страны СНГ. Быстрая доставка
+                            гарантирована.
+                        </p>
+                </div>
+
+            </section>
+
+            <section class="banner">
+
+                <div class="left">
+                    <img src="https://s-gan.ru/wp-content/uploads/2025/01/%D0%A4%D0%BE%D1%82%D0%BE-%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%BE%D0%B2.png"
+                        alt="banner" class="img">
+                </div>
+                <div class="right">
+                    <h2 class="header-2">
+                        Премиальные игрушки
+                    </h2>
+
+                    <p class="descr">
+                        Премиальные секс-игрушки для незабываемых ощущений! Закажи на сайте и получи <strong>
+                            15% СКИДКУ
+                        </strong>
+                        . Порадуй себя и открой новые грани удовольствия!
+                    </p>
+
+                    <div class="btn__container">
+                        <a href="/shop" class="btn">
+                            Купить в магазине SGAN
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="article">
+                <h2 class="header-2">
+                    Блог SGAN
+                </h2>
+                <div class="swiper swiper-blog">
+
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="top">
+                                <img src="https://eskalube.ru/assets/cache_image/blog/ph_flora/01_900x900_6cf.jpg"
+                                    alt="article" class="img">
+                            </div>
+                            <div class="bottom">
+                                <h3 class="header-3">
+                                    Как выбрать лубрикант?
+                                </h3>
+                                <p class="descr">
+                                    Лубриканты - это незаменимый помощник в интимной жизни. Они помогают избежать
+                                    дискомфорта и усиливают ощущения.
+                                </p>
+                                <a href="/blog/how-to-choose-lubricant" class="link">
+                                    Читать статью
+                                </a>
+                                <div class="date__container">
+                                    <span class="date">
+                                        25.07.2025
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="top">
+                                <img src="https://eskalube.ru/assets/cache_image/blog/ph_flora/01_900x900_6cf.jpg"
+                                    alt="article" class="img">
+                            </div>
+                            <div class="bottom">
+                                <h3 class="header-3">
+                                    Как выбрать лубрикант?
+                                </h3>
+                                <p class="descr">
+                                    Лубриканты - это незаменимый помощник в интимной жизни. Они помогают избежать
+                                    дискомфорта и усиливают ощущения.
+                                </p>
+                                <a href="/blog/how-to-choose-lubricant" class="link">
+                                    Читать статью
+                                </a>
+                                <div class="date__container">
+                                    <span class="date">
+                                        25.07.2025
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="top">
+                                <img src="https://eskalube.ru/assets/cache_image/blog/ph_flora/01_900x900_6cf.jpg"
+                                    alt="article" class="img">
+                            </div>
+                            <div class="bottom">
+                                <h3 class="header-3">
+                                    Как выбрать лубрикант?
+                                </h3>
+                                <p class="descr">
+                                    Лубриканты - это незаменимый помощник в интимной жизни. Они помогают избежать
+                                    дискомфорта и усиливают ощущения.
+                                </p>
+                                <a href="/blog/how-to-choose-lubricant" class="link">
+                                    Читать статью
+                                </a>
+                                <div class="date__container">
+                                    <span class="date">
+                                        25.07.2025
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="top">
+                                <img src="https://eskalube.ru/assets/cache_image/blog/ph_flora/01_900x900_6cf.jpg"
+                                    alt="article" class="img">
+                            </div>
+                            <div class="bottom">
+                                <h3 class="header-3">
+                                    Как выбрать лубрикант?
+                                </h3>
+                                <p class="descr">
+                                    Лубриканты - это незаменимый помощник в интимной жизни. Они помогают избежать
+                                    дискомфорта и усиливают ощущения.
+                                </p>
+                                <a href="/blog/how-to-choose-lubricant" class="link">
+                                    Читать статью
+                                </a>
+                                <div class="date__container">
+                                    <span class="date">
+                                        25.07.2025
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="top">
+                                <img src="https://eskalube.ru/assets/cache_image/blog/ph_flora/01_900x900_6cf.jpg"
+                                    alt="article" class="img">
+                            </div>
+                            <div class="bottom">
+                                <h3 class="header-3">
+                                    Как выбрать лубрикант?
+                                </h3>
+                                <p class="descr">
+                                    Лубриканты - это незаменимый помощник в интимной жизни. Они помогают избежать
+                                    дискомфорта и усиливают ощущения.
+                                </p>
+                                <a href="/blog/how-to-choose-lubricant" class="link">
+                                    Читать статью
+                                </a>
+                                <div class="date__container">
+                                    <span class="date">
+                                        25.07.2025
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="top">
+                                <img src="https://eskalube.ru/assets/cache_image/blog/ph_flora/01_900x900_6cf.jpg"
+                                    alt="article" class="img">
+                            </div>
+                            <div class="bottom">
+                                <h3 class="header-3">
+                                    Как выбрать лубрикант?
+                                </h3>
+                                <p class="descr">
+                                    Лубриканты - это незаменимый помощник в интимной жизни. Они помогают избежать
+                                    дискомфорта и усиливают ощущения.
+                                </p>
+                                <a href="/blog/how-to-choose-lubricant" class="link">
+                                    Читать статью
+                                </a>
+                                <div class="date__container">
+                                    <span class="date">
+                                        25.07.2025
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <div class="swiper-scrollbar"></div>
+
+                </div>
+            </section>
+
+            <section class="marqu">
+                <div class="marquee-container">
+                    <div class="marquee">
+                        <span class="marquee-item organic highlight">100% NATURAL</span>
+                        <span class="marquee-item vegan">VEGAN</span>
+                        <span class="marquee-item ph">BALANCED PH 4.3</span>
+                        <span class="marquee-item">HYPOALLERGENIC</span>
+                        <span class="marquee-item organic">ORGANIC</span>
+                        <span class="marquee-item">LUBRICANT</span>
+                        <span class="marquee-item">COMESTIBLE</span>
+                        <span class="marquee-item highlight">CERTIFIED</span>
+                        <span class="marquee-item organic">ATTENTION</span>
+                        <span class="marquee-item vegan">CRUELTY-FREE</span>
+                        <span class="marquee-item ph">DERMATOLOGICALLY TESTED</span>
+
+                        <!-- Повторяем элементы для непрерывной анимации -->
+                        <span class="marquee-item organic highlight">100% NATURAL</span>
+                        <span class="marquee-item vegan">VEGAN</span>
+                        <span class="marquee-item ph">BALANCED PH 4.3</span>
+                        <span class="marquee-item">HYPOALLERGENIC</span>
+                        <span class="marquee-item organic">ORGANIC</span>
+                        <span class="marquee-item">LUBRICANT</span>
+                        <span class="marquee-item">COMESTIBLE</span>
+                        <span class="marquee-item highlight">CERTIFIED</span>
+                        <span class="marquee-item organic">ATTENTION</span>
+                        <span class="marquee-item vegan">CRUELTY-FREE</span>
+                        <span class="marquee-item ph">DERMATOLOGICALLY TESTED</span>
+                    </div>
+            </section>
+
+            <section class="faq">
+                <h2 class="header-2">FAQ</h2>
+
+                <ul class="faq__list">
+                    <li class="faq__item active">
+                        <div class="faq__header">
+                            <h3 class="header-3">Как выбрать лубрикант?</h3>
+                            <i class="bi bi-chevron-down faq__icon"></i>
+                        </div>
+                        <div class="faq__content">
+                            <p class="descr">
+                                Лубриканты - это незаменимый помощник в интимной жизни. Они помогают избежать
+                                дискомфорта и
+                                усиливают ощущения.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="faq__item">
+                        <div class="faq__header">
+                            <h3 class="header-3">Как выбрать лубрикант?</h3>
+                            <i class="bi bi-chevron-down faq__icon"></i>
+                        </div>
+                        <div class="faq__content">
+                            <p class="descr">
+                                Лубриканты - это незаменимый помощник в интимной жизни. Они помогают избежать
+                                дискомфорта и
+                                усиливают ощущения.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="faq__item">
+                        <div class="faq__header">
+                            <h3 class="header-3">Как выбрать лубрикант?</h3>
+                            <i class="bi bi-chevron-down faq__icon"></i>
+                        </div>
+                        <div class="faq__content">
+                            <p class="descr">
+                                Лубриканты - это незаменимый помощник в интимной жизни. Они помогают избежать
+                                дискомфорта и
+                                усиливают ощущения.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+
+            <section class="about">
+                <h2 class="header-2">
+                    О компании
+                </h2>
+
+                <div class="about__container">
+                    <div class="left">
+                        <img src="https://s-gan.ru/wp-content/uploads/2025/01/Frame-7-6.png" alt="owner" class="img">
+                    </div>
+                    <div class="right">
+                        <div class="elementor-widget-container">
+                            <p class="descr">
+                                Добро пожаловать в SGAN Adult 18+ — интернет-магазин товаров для взрослых, созданный для
+                                того, чтобы каждый мог найти всё необходимое для улучшения своей интимной жизни. Мы
+                                предлагаем широкий ассортимент продукции, которая подойдёт как мужчинам, так и женщинам,
+                                помогая разнообразить сексуальные отношения, укрепить близость и раскрыть новые грани
+                                удовольствия.
+                            </p>
+                            <p class="descr">
+                                SGAN был основан в 2023 году Ярославом Сергань, отцом — врачом-гинекологом и андрологом
+                                с
+                                многолетним опытом работы и остальной семьёй. Профессиональные знания отца и стремление
+                                помочь людям стали основой для создания бренда, который быстро завоевал популярность в
+                                России и странах СНГ. Вся семья вложила душу в развитие компании, чтобы каждый клиент
+                                мог найти качественные и безопасные товары для взрослых.
+                            </p>
+                            <p class="descr">
+                                Особенностью нашего магазина является то, что рецептуры для продукции закупаются в
+                                Нидерландах — стране, известной своими передовыми технологиями в области интимных
+                                товаров. Мы тщательно отбираем поставщиков, чтобы гарантировать высокое качество и
+                                безопасность нашей продукции. Все товары проходят строгий контроль, прежде чем попасть
+                                на полки нашего магазина.
+                            </p>
+                            <p class="descr">
+                                В ассортименте SGAN Adult 18+ вы найдёте всё, что нужно для воплощения ваших желаний:
+                                секс-игрушки, интимную косметику, аксессуары для ролевых игр, средства для повышения
+                                либидо и многое другое. Мы предлагаем товары для мужчин, женщин и пар, чтобы каждый мог
+                                найти что-то особенное для себя. Наш интернет-магазин — это место, где можно купить
+                                интимные товары по доступным ценам с доставкой по всей России и странам СНГ.
+                            </p>
+                            <p class="descr">
+                                Мы гордимся тем, что SGAN Adult 18+ стал первым брендом в России, который начал
+                                производить интимные товары на основе передовых европейских технологий. За короткий срок
+                                наш ассортимент значительно вырос, и мы продолжаем радовать наших клиентов новинками,
+                                которые помогут сделать вашу сексуальную жизнь ярче и насыщеннее.
+                            </p>
+                            <p class="descr">
+                                Наши консультанты всегда готовы помочь вам с выбором, ответить на все вопросы и
+                                предложить лучшие решения для ваших потребностей. Мы заботимся о конфиденциальности и
+                                комфорте наших клиентов, поэтому гарантируем быструю и анонимную доставку.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div class="modal-overlay" id="promoModal">
+        <div class="modal">
+
+            <div class="top">
+                <img src="https://i0.wp.com/s-gan.ru/wp-content/uploads/2025/01/Frame-1-13.png?ssl=1" alt="price bonus" class="img">
+            </div>
+            <div class="bottom">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <h2>Специальное предложение!</h2>
+                    <p>Мы дарим 3 пробника лубриканта каждому заказу абсолютно<br>
+                        <strong>БЕСПЛАТНО!</strong>
+                    </p>
+
+                    <p>А еще для Вас действует эксклюзивная <strong>СКИДКА 15%</strong> на<br>
+                        покупку. Успейте оформить заказ и воспользоваться<br>
+                        преимуществами!</p>
+
+                    <div class="modal-footer">
+                        <label>
+                            <input type="checkbox" id="dontShowAgain"> Больше не показывать
+                        </label>
+                        <button class="modal-btn">Понятно, спасибо!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="top">
+                <div class="left">
+                    <a href="/home" class="link">
+                        <h2 class="header-2">
+                            <span class="logo-dark">SGAN Adult</span>
+                        </h2>
+                    </a>
+
+                    <p class="descr">
+                        Email: <a href="mailto:info@s-gan.ru" class="link">info@s-gan.ru</a>
+                    </p>
+                    <p class="descr">
+                        <a href="tel:89991137959" class="link">Поддержка: 8 (999) 113-79-59</a>
+                    </p>
+                    <p class="descr">
+                        Офис: Москва, Большая Грузинская, 42
+                    </p>
+                </div>
+                <div class="right">
+                    <ul class="grid-3__list">
+                        <li class="grid-3__item">
+                            <a href="/home" class="link">
+                                <p class="descr">
+                                    О компании
+                                </p>
+                            </a>
+                        </li>
+                        <li class="grid-3__item">
+                            <a href="/home" class="link">
+                                <p class="descr">
+                                    О компании
+                                </p>
+                            </a>
+                        </li>
+                        <li class="grid-3__item">
+                            <a href="/home" class="link">
+                                <p class="descr">
+                                    О компании
+                                </p>
+                            </a>
+                        </li>
+                        <li class="grid-3__item">
+                            <a href="/home" class="link">
+                                <p class="descr">
+                                    О компании
+                                </p>
+                            </a>
+                        </li>
+                        <li class="grid-3__item">
+                            <a href="/home" class="link">
+                                <p class="descr">
+                                    О компании
+                                </p>
+                            </a>
+                        </li>
+                        <li class="grid-3__item">
+                            <a href="/home" class="link">
+                                <p class="descr">
+                                    О компании
+                                </p>
+                            </a>
+                        </li>
+                        <li class="grid-3__item">
+                            <a href="/home" class="link">
+                                <p class="descr">
+                                    О компании
+                                </p>
+                            </a>
+                        </li>
+                        <li class="grid-3__item">
+                            <a href="/home" class="link">
+                                <p class="descr">
+                                    О компании
+                                </p>
+                            </a>
+                        </li>
+                        <li class="grid-3__item">
+                            <a href="/home" class="link">
+                                <p class="descr">
+                                    О компании
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom">
+                <h3 class="header-3">
+                    ©2023 - 2025 Брендовый магазин SGAN
+                </h3>
+            </div>
+        </div>
+    </footer>
+
+
+    <script defer src="script/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+</body>
+
+</html>
