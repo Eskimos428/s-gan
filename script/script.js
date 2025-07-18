@@ -13,52 +13,250 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   /*выпадающее меню в header */
+  // Обработка для десктопного и мобильного меню
   document.querySelectorAll('.dropdown-column').forEach(column => {
     const sublist = column.querySelector('.dropdown-sublist');
     if (sublist) {
       column.classList.add('has-sublist');
 
+      // Для десктопных устройств - hover
       column.addEventListener('mouseenter', () => {
-        // Можно добавить анимацию появления подкатегорий
-        sublist.style.opacity = '1';
-        sublist.style.maxHeight = '500px';
+        if (window.innerWidth > 992) {
+          sublist.style.opacity = '1';
+          sublist.style.maxHeight = '500px';
+        }
+      });
+
+      // Для мобильных устройств - tap
+      column.addEventListener('click', (e) => {
+        if (window.innerWidth <= 992) {
+          e.preventDefault();
+          e.stopPropagation();
+
+          // Закрываем все открытые подменю
+          document.querySelectorAll('.dropdown-sublist').forEach(item => {
+            if (item !== sublist) {
+              item.style.opacity = '0';
+              item.style.maxHeight = '0';
+            }
+          });
+
+          // Переключаем текущее подменю
+          if (sublist.style.opacity === '1') {
+            sublist.style.opacity = '0';
+            sublist.style.maxHeight = '0';
+          } else {
+            sublist.style.opacity = '1';
+            sublist.style.maxHeight = '500px';
+          }
+        }
       });
     }
   });
 
+  // Закрытие меню при клике вне его области
+  document.addEventListener('click', (e) => {
+    if (window.innerWidth <= 992) { // Только для мобильных
+      const isDropdown = e.target.closest('.dropdown-column');
+      const isCloseButton = e.target.closest('.bi-x');
 
+      if (!isDropdown || isCloseButton) {
+        document.querySelectorAll('.dropdown-sublist').forEach(sublist => {
+          sublist.style.opacity = '0';
+          sublist.style.maxHeight = '0';
+        });
+
+        // Также закрываем мобильное меню, если кликнули на bi-x
+        if (isCloseButton) {
+          const mobileMenu = document.querySelector('.mobile-menu');
+          if (mobileMenu) {
+            mobileMenu.classList.remove('active');
+          }
+        }
+      }
+    }
+  });
+
+  // Обработка главного меню для мобильной версии
+  const dropdownItems = document.querySelectorAll('.nav__mobile .nav__item--dropdown > .nav__link');
+
+  dropdownItems.forEach(item => {
+    item.addEventListener('click', function (e) {
+      if (window.innerWidth <= 992) { // Только для мобильных
+        e.preventDefault();
+        const dropdown = this.parentElement.querySelector('.mobile-dropdown');
+        const arrow = this.querySelector('.dropdown-arrow');
+
+        // Закрываем все другие открытые dropdowns
+        document.querySelectorAll('.mobile-dropdown.active').forEach(openDropdown => {
+          if (openDropdown !== dropdown) {
+            openDropdown.classList.remove('active');
+            const openArrow = openDropdown.closest('.nav__item--dropdown').querySelector('.dropdown-arrow');
+            openArrow.classList.remove('active');
+          }
+        });
+
+        // Переключаем текущий dropdown
+        dropdown.classList.toggle('active');
+        arrow.classList.toggle('active');
+      }
+    });
+  });
+
+  // Открытие/закрытие мобильного меню
+  const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+  const mobileMenu = document.querySelector('.mobile-menu');
+
+  if (mobileMenuToggle && mobileMenu) {
+    mobileMenuToggle.addEventListener('click', function () {
+      mobileMenu.classList.toggle('active');
+    });
+  }
+
+  // Закрытие при клике вне меню
+  document.addEventListener('click', function (e) {
+    if (window.innerWidth <= 992) {
+      // Проверяем, был ли клик вне dropdown
+      const isDropdownClick = e.target.closest('.nav__item--dropdown');
+      const isMenuToggleClick = e.target.closest('.mobile-menu-toggle');
+
+      if (!isDropdownClick && !isMenuToggleClick) {
+        // Закрываем все dropdowns и сбрасываем стрелки
+        document.querySelectorAll('.mobile-dropdown.active').forEach(dropdown => {
+          dropdown.classList.remove('active');
+          const arrow = dropdown.closest('.nav__item--dropdown').querySelector('.dropdown-arrow');
+          arrow.classList.remove('active');
+        });
+      }
+    }
+  });
+
+
+  //фиксирвоанание хедера при прокрутке
+  const headerBottom = document.querySelector('.fixed-container');
+
+  if (!headerBottom) return;
+
+  let lastScroll = 0;
+  let ticking = false;
+
+  function updateHeader(scrollPos) {
+    const scrollThreshold = document.body.scrollHeight * 0.05;
+
+    if (scrollPos > scrollThreshold) {
+      headerBottom.classList.add('fixed');
+    } else {
+      headerBottom.classList.remove('fixed');
+    }
+  }
+
+  window.addEventListener('scroll', function () {
+    lastScroll = window.scrollY;
+
+    if (!ticking) {
+      window.requestAnimationFrame(function () {
+        updateHeader(lastScroll);
+        ticking = false;
+      });
+
+      ticking = true;
+    }
+  });
+
+
+  // Открытие поиска в десктопе
+  const searchIconDesktop = document.querySelector('.search-icon-desktop');
+  const desktopSearchContainer = document.querySelector('.desktop-search');
+
+  if (searchIconDesktop && desktopSearchContainer) {
+    // Обработчик клика по иконке поиска
+    searchIconDesktop.addEventListener('click', function (e) {
+      e.stopPropagation(); // Предотвращаем всплытие события
+      desktopSearchContainer.classList.toggle('active');
+    });
+
+    // Закрытие при клике вне области поиска
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('.desktop-search') &&
+        !e.target.closest('.search-icon-desktop')) {
+        desktopSearchContainer.classList.remove('active');
+      }
+    });
+
+    // Закрытие по клавише ESC
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && desktopSearchContainer.classList.contains('active')) {
+        desktopSearchContainer.classList.remove('active');
+      }
+    });
+  }
+
+  //поиск в мобильном меню
+  const searchInput = document.querySelector('.search-input');
+
+  if (searchInput) {
+
+    // Сохранение истории поиска
+    const searchForm = document.querySelector('.search-form');
+    searchForm.addEventListener('submit', function (e) {
+      const query = searchInput.value.trim();
+      if (query) {
+        saveToSearchHistory(query);
+      }
+    });
+  }
+
+  function saveToSearchHistory(query) {
+    let history = JSON.parse(localStorage.getItem('searchHistory') || '[]');
+    history = history.filter(item => item !== query);
+    history.unshift(query);
+    history = history.slice(0, 5);
+    localStorage.setItem('searchHistory', JSON.stringify(history));
+  }
 
   //swiper main
-
   const swiperAuto = new Swiper('.swiper-auto', {
     direction: 'vertical',
     loop: true,
-    slidesPerView: 2,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
+    slidesPerView: 1, // Базовое значение для мобильных
+    // autoplay: {
+    //   delay: 3000,
+    //   disableOnInteraction: false,
+    // },
     pagination: {
       el: '.swiper-pagination',
     },
+    breakpoints: {
+      600: {
+        slidesPerView: 3 // При ширине ≥600px показываем 3 слайда
+      }
+    }
   });
 
 
   //swiper blog
-
   const swiper = new Swiper('.swiper-blog', {
     loop: false,
     slidesPerView: 4,
-
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-
-    // And if we need scrollbar
     scrollbar: {
       el: '.swiper-scrollbar',
     },
+    // Адаптивные настройки
+    breakpoints: {
+      768: {
+        slidesPerView: 3
+      },
+      480: {
+        slidesPerView: 2
+      },
+      320: {
+        slidesPerView: 1
+      }
+    }
   });
 
 
@@ -188,6 +386,59 @@ document.addEventListener('DOMContentLoaded', function () {
     faqItems[0].classList.add('active');
   }
 
+
+  //модалка с возрастом
+
+    // Проверяем подтверждение возраста
+    if (!sessionStorage.getItem('ageVerified')) {
+      initAgeVerification();
+    } else {
+      // Скрываем оверлей, если он есть в HTML
+      const overlay = document.querySelector('.age-verification-overlay');
+      if (overlay) {
+        overlay.style.display = 'none';
+      }
+    }
+
+
+  function initAgeVerification() {
+    const overlay = document.querySelector('.age-verification-overlay');
+
+    if (!overlay) {
+      return;
+    }
+
+    // Показываем оверлей
+    overlay.style.display = 'flex';
+
+    // Добавляем анимацию
+    const style = document.createElement('style');
+    style.innerHTML = `
+    @keyframes fadeOut {
+      from { opacity: 1; }
+      to { opacity: 0; }
+    }
+  `;
+    document.head.appendChild(style);
+
+    // Используем делегирование событий для надежности
+    overlay.addEventListener('click', function (e) {
+      // Подтверждение возраста
+      if (e.target.classList.contains('age-confirm')) {
+        sessionStorage.setItem('ageVerified', 'true');
+        overlay.style.animation = 'fadeOut 0.5s ease-out forwards';
+        setTimeout(() => {
+          overlay.style.display = 'none';
+        }, 500);
+      }
+
+      // Отказ
+      if (e.target.classList.contains('age-deny')) {
+        window.location.href = 'https://yandex.ru';
+      }
+    });
+
+  }
 
   //модальное окно при старте 
   const modal = document.getElementById('promoModal');
