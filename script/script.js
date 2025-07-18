@@ -216,19 +216,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
   //swiper main
   const swiperAuto = new Swiper('.swiper-auto', {
-    direction: 'vertical',
+    direction: 'horizontal',
     loop: true,
     slidesPerView: 1, // Базовое значение для мобильных
-    // autoplay: {
-    //   delay: 3000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: '.swiper-pagination',
     },
     breakpoints: {
       600: {
-        slidesPerView: 3 // При ширине ≥600px показываем 3 слайда
+        slidesPerView: 3, // При ширине ≥600px показываем 3 слайда
+         direction: 'vertical',
       }
     }
   });
