@@ -1670,7 +1670,7 @@ input[type=checkbox] {
     font-size: 16px;
   }
   .hero__content {
-    height: 60vh;
+    height: 70vh;
     min-height: 50vh;
   }
   .hero__content .right .swiper-slide {
@@ -1680,7 +1680,7 @@ input[type=checkbox] {
     margin-top: 0px;
   }
   .hero__content .right .swiper-auto {
-    padding: 20px 0;
+    padding: 0px 0;
   }
   .hero__content .right .swiper-slide {
     padding: 10px 5px;
@@ -1696,7 +1696,7 @@ input[type=checkbox] {
     padding-left: 0;
   }
   .hero__content .right .img {
-    max-height: 270px;
+    max-height: 210px;
   }
   .hero__content .right .card__slider {
     height: auto;
@@ -1705,7 +1705,7 @@ input[type=checkbox] {
     margin-top: -6px;
   }
   section {
-    margin-top: 60px !important;
+    margin-top: 100px !important;
   }
   .header-2 {
     font-size: 28px;
@@ -1764,7 +1764,7 @@ input[type=checkbox] {
     font-size: 28px;
   }
   .mobile-menu {
-    top: 30px;
+    top: 0px;
   }
   .category__link .item {
     grid-column: span 6;
